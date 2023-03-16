@@ -1,0 +1,328 @@
+/* ===Global Rules=== */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  color: var(--main-color);
+}
+
+/* ===Variables=== */
+:root {
+  --main-color: rgb(22, 22, 23);
+  --secondary-color: rgba(248, 230, 66, 0.858);
+}
+
+/* ===Components=== */
+.container {
+  padding: 0 2rem;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+.section {
+  margin-bottom: 5rem;
+}
+.section header {
+  border-bottom: 1px solid var(--main-color);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+.section header h2 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+/* ===Starts Styling=== */
+
+/* -------Header Starts------- */
+.header {
+  width: 100%;
+  height: 10vh;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--main-color);
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.header .logo {
+  color: var(--main-color);
+}
+.header .logo h2 {
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+.header .logo span {
+  font-weight: 800;
+  color: white;
+  background-color: var(--main-color);
+  padding: .3rem;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.header nav {
+  display: flex;
+  position: relative;
+}
+.header nav ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.header nav ul li a{
+  padding: .7rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: .5s ease;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -ms-transition: .5s ease;
+  -o-transition: .5s ease;
+  border-radius: .3rem;
+  -webkit-border-radius: .3rem;
+  -moz-border-radius: .3rem;
+  -ms-border-radius: .3rem;
+  -o-border-radius: .3rem;
+}
+.header nav ul li a:hover {
+  background-color: var(--secondary-color);
+}
+.header nav ul li a {
+  color: var(--main-color);
+}
+.header nav .burger-icn {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header nav .burger-icn span {
+  display: none;
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-color);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+/* -------Header Ends------- */
+
+/* -------Hero Starts------- */
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../images/Hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero h1 {
+  font-size: 4rem;
+  color: white;
+  font-weight: 700;
+
+}
+.hero h1 span {
+  padding: 1rem;
+  font-weight: 800;
+  background-color: rgba(22, 22, 23, 0.75);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+/* -------Hero Ends------- */
+
+/* -------Projects Starts------- */
+.container .section .wrapper {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.container .section .wrapper .card {
+  width: calc((100% - 2rem) / 2);
+  position: relative;
+}
+.container .section .wrapper .card .image img{
+  width: 100%;
+}
+.container .project .wrapper .card span {
+  padding: 1.5rem 3rem 1.5rem 2rem;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* -------Projects Ends------- */
+
+/* -------About Starts------- */
+.container .about .about-text {
+  font-weight: 600;
+  text-align: justify;
+  margin-bottom: 3rem;
+}
+.container .about .wrapper .card .image {
+  height: 350px;
+  margin-bottom: 1rem;
+}
+.container .about .wrapper .card .image img {
+  height: 100%;
+}
+.container .about .wrapper .card h3{
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.container .about .wrapper .card h4 {
+  margin-bottom: 1.3rem;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+.container .about .wrapper .card p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.container .about .wrapper .card button {
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: .7rem;
+  background-color: #eee;
+  -webkit-border-radius: .7rem;
+  -moz-border-radius: .7rem;
+  -ms-border-radius: .7rem;
+  -o-border-radius: .7rem;
+}
+/* -------About Ends------- */
+
+/* -------Contact Starts------- */
+.container .contact form {
+  width: 100%;
+}
+.container .contact form input,
+.container .contact form textarea {
+  resize: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: .7rem .5rem;
+  border: 1px solid #aaa;
+  border-radius: .3rem;
+  -webkit-border-radius: .3rem;
+  -moz-border-radius: .3rem;
+  -ms-border-radius: .3rem;
+  -o-border-radius: .3rem;
+}
+.container .contact form input[type="submit"] {
+  cursor: pointer;
+  width: fit-content;
+  padding: 1rem 1.2rem;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.container .contact form input[type="submit"]:hover {
+  opacity: .9;
+}
+/* -------Contact Ends------- */
+
+/* -------Footer Starts------- */
+footer {
+  padding: 3rem;
+  background-color: var(--main-color);
+  text-align: center;
+}
+footer p {
+  color: white;
+  font-weight: 700;
+}
+footer p span {
+  color: var(--secondary-color);
+}
+/* -------Footer Ends------- */
+
+/* -------Responsive------- */
+
+/* Mobil Screen */
+@media (max-width: 480px) {
+  /* =====Header===== */
+  .header {
+    padding: 0 1rem;
+  }
+  .header .logo h2{
+    font-size: 1.2rem;
+  }
+  .header nav ul {
+    display: none;
+  }
+  .header nav .burger-icn span {
+    display: block;
+  }
+
+  /* =====Hero===== */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* =====Project & About===== */
+  .container .section .wrapper .card {
+    width: 100%;
+  }
+
+  /* =====About===== */
+  .container .about .wrapper .card .image {
+    height: 250px;
+  }
+}
+
+/* large Screen */
+@media (min-width: 1201px) {
+  .header {
+    padding: 2.5rem 3rem;
+  }
+}
+
